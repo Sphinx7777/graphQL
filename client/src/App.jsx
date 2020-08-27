@@ -1,7 +1,6 @@
 import React,  {Suspense, lazy} from 'react';
 import {Route, Switch, withRouter} from "react-router-dom";
 import {compose} from "redux";
-import s from '../src/components/users/users.module.scss';
 import Home from '../src/components/main/index.js';
 import { Header } from './components/header';
 

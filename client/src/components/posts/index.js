@@ -1,7 +1,7 @@
 import React from 'react';
 import s from '../users/users.module.scss';
 import { getPosts } from '../queries/index'
-import { useQuery, useMutation } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 
 
 const Posts = () => {

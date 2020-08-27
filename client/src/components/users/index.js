@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import s from './users.module.scss';
 import { getUsers, getPosts, addUserMutation, removeUserMutation, updateUserMutation, CheckMail, addNewPost } from '../queries/index'
 import AddUser from '../forms/addUser';
@@ -98,9 +98,9 @@ const Users = () => {
                     ))}
                 </ul>
             </div>
-            {/* <div className={s.addWrapper}>
+            <div className={s.addWrapper}>
                 <AddUser onSubmit={handlesSubmit} id={id} initialValue={initialValue} defaultState={defaultState} emailError={emailError} />
-            </div> */}
+            </div>
             {
                 newPostId && 
                 <div className={s.modalWrapper} onClick={closeModal}>

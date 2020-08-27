@@ -12,7 +12,7 @@ class NewPostForm extends React.Component {
         })
     }
     handleSubmit = (e) => {
-        const { title, description, id } = this.state
+        const { title, description } = this.state
         e.preventDefault()
         this.props.onSubmit({
             title, description
