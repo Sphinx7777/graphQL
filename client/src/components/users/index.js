@@ -5,7 +5,7 @@ import AddUser from './addUser';
 import { useQuery, useMutation } from '@apollo/react-hooks'
 
 
-const Users = (props) => {
+const Users = () => {
     const [id, setId] = useState('')
     const [emailError, setEmailError] = useState(null)
     const defaultState = {
@@ -35,7 +35,7 @@ const Users = (props) => {
                     add({
                             variables: data
                         })
-                        setEmailError(null)                   
+                        setEmailError(null)                
                 } else {
                     setEmailError(response?.data?.checkMail?.email)
                 }

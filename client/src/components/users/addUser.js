@@ -3,7 +3,8 @@ import s from './users.module.scss';
 
 class AddUser extends React.Component {
     state = {
-        ...this.props.defaultState
+        ...this.props.defaultState,
+        emailError: this.props.emailError
     }
     handleChange = (e) => {
         this.setState({
@@ -22,13 +23,16 @@ class AddUser extends React.Component {
         if (prevProps.initialValue !== this.props.initialValue) {
             this.setState({ ...this.props.initialValue, id: this.props.id })
         }
+        if (prevProps.emailError !== this.props.emailError) {
+            this.setState({ emailError: this.props.emailError })
+        }
     }
     resetState = () => {
         this.setState(this.props.defaultState)
     }
 
     render() {
-        const { firstName, lastName, email } = this.state
+        const { firstName, lastName, email, emailError } = this.state
         const isFormValid = firstName.length > 0 && lastName.length > 0 && email.length > 0
         return (
             <form onSubmit={this.handleSubmit.bind(this)} className={s.formWrapper}>
@@ -61,7 +65,7 @@ class AddUser extends React.Component {
                     onChange={this.handleChange}
                 />
                 {
-                    this.props.emailError && <div className={s.alert}>Email: {this.props.emailError} is already taken</div>
+                    emailError && <div className={s.alert}>Email: {emailError} is already taken</div>
                 }
                 
                 <div className={s.submitBtn}>
