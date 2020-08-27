@@ -12,12 +12,12 @@ app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true
 }))
-mongoose.connect('mongodb+srv://sfinx:333666@cluster0-qxxie.mongodb.net/', {
+mongoose.connect('mongodb://localhost:27017', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
-    dbName: "posts"
+    dbName: "GraphQL"
 })
 mongoose.connection.on('error', err => console.log(`DB connection error: ${err}`))
 mongoose.connection.once('open', () => console.log('> Connected to DB!'))

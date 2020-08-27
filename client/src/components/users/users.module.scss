@@ -50,3 +50,28 @@ width: 50%;
     color: hotpink;
     text-align: center;
 }
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.modal {
+    margin-top: 10rem;
+    background-color: azure;
+}
+.postWrapper {
+    width: 100%;
+    padding: 10px 10px;
+    text-align: left;
+}
+.headItem {
+padding: 5px 5px;
+background-color: rgba(0,0,0,.1);
+margin-bottom: 1rem;
+}
+.infoItem {
+    margin-bottom: 1rem;
+}
