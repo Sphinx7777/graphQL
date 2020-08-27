@@ -1,0 +1,52 @@
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.userItem {
+display: flex;
+flex-direction: column;
+}
+.full{
+width: 100%;
+margin: 1rem auto;
+}
+.addWrapper {
+    margin: 3rem auto 0 auto;
+}
+.remove {
+    margin-left: auto;
+    color: red;
+    cursor: pointer;
+    &:hover {
+    font-size: 1.2rem;
+    }
+}
+.update {
+    margin-left: auto;
+    color: green;
+    cursor: pointer;
+    margin-top: 1rem;
+    &:hover {
+        font-size: 1.2rem;
+        }
+}
+.formWrapper {
+    display: flex;
+flex-direction: column;
+margin: 0 auto;
+width: 50%;
+}
+.submitBtn {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 3rem auto;
+}
+.inputItem {
+    margin: 1rem auto;
+}
+.alert {
+    color: hotpink;
+    text-align: center;
+}
