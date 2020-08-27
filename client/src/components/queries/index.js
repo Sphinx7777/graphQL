@@ -1,6 +1,5 @@
 import { gql } from 'apollo-boost'
 
-
 export const getUsers = gql`
 query getUsers{ 
     getUsers {
@@ -18,8 +17,6 @@ export const CheckMail = gql`
         }
     }
 `
-
-
 export const addUserMutation = gql`
     mutation($firstName: String, $lastName: String, $email: String) {
         addUser(firstName: $firstName, lastName: $lastName, email: $email) {
